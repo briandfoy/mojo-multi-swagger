@@ -1,4 +1,4 @@
-package multi-swagger::Controller::Example;
+package MultiSwagger::Controller::Example;
 use Mojo::Base 'Mojolicious::Controller', -signatures;
 
 # This action will render a template
