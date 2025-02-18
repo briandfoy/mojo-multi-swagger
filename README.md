@@ -11,12 +11,26 @@ the modules. You need to restart morbo if you change the Swagger files (under *s
 
 	morbo ./script/multi-swagger
 
-Access it from the browser. You should see different messages from each of these URLs:
+Access it from a browser. The *mojo* cammand can do this, and *curl* is handy too. You should see different messages from each of these URLs:
 
 The *v1* version of the API requires a form parameter:
+
+	mojo get -H http://localhost:3000/v2/hello?Hello_there
 
     curl http://localhost:3000/v1/hello?message=hello+there
 
 The *v2* version of the API requires a request header:
 
+	mojo get -H 'X-Hello-Message: General Kenobi' http://localhost:3000/v2/hello
+
 	curl -H 'X-Hello-Message: General Kenobi" http://localhost:3000/v2/hello
+
+And the *v2* version disallows the `message` parameter so this returns a 400 (Bad Request):
+
+	mojo get http://localhost:3000/v2/hello?message=General+Kenobi
+
+	curl -H 'X-Hello-Message: General Kenobi" http://localhost:3000/v2/hello?message=General+Kenobi
+
+
+
+
