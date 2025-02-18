@@ -5,8 +5,10 @@ sub hello ($c) {
   return unless $c->openapi->valid_input;
   $c->app->log->debug("In hello V1");
 
+  my $message = $c->param('message') // 'default message';
+
   $c->render(
-    text     => 'Hello V1',
+    text     => $message,
     format   => 'txt',
     status   => 200,
   	);

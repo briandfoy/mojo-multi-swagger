@@ -24,6 +24,12 @@ paths:
       operationId: hello
       description: >-
         Say hello
+      parameters:
+        - name: message
+          in: query
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           $ref: '#/components/responses/text'
