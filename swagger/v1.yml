@@ -1,0 +1,38 @@
+openapi: '3.0.0'
+info:
+  description: >-
+    Test API version 1
+  version: 2.0.0
+  title: Test API version 1
+  contact:
+    email: nobody@example.com
+  license:
+    name: 'Artistic 2'
+    url: 'https://www.perlfoundation.org/artistic-license-20.html'
+servers:
+  - url: http://localhost/v1
+    variables:
+      scheme:
+        description: 'HTTP demo'
+        enum:
+          - http
+        default: http
+paths:
+  /hello:
+    get:
+      x-mojo-to: V1::Hello#hello
+      operationId: hello
+      description: >-
+        Say hello
+      responses:
+        '200':
+          $ref: '#/components/responses/text'
+components:
+  responses:
+    text:
+        description: >
+            Simple text response
+        content:
+            text/plain:
+                schema:
+                    type: string
