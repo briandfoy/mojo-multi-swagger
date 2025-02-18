@@ -6,7 +6,7 @@ sub hello ($c) {
   $c->app->log->debug("In hello V2");
 
   $c->render(
-    text     => 'Hello V2',
+    text     => 'Hello from V2',
     format   => 'txt',
     status   => 200,
   	);
