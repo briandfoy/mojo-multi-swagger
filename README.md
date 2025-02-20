@@ -31,6 +31,11 @@ And the *v2* version disallows the `message` parameter so this returns a 400 (Ba
 
 	curl -H 'X-Hello-Message: General Kenobi" http://localhost:3000/v2/hello?message=General+Kenobi
 
+##
+
+* [JSON::Validator](https://metacpan.org/pod/JSON::Validator)
+* [mojo get](https://docs.mojolicious.org/Mojolicious/Command/get)
+* [Mojolicious::Plugin::OpenAPI](https://metacpan.org/pod/Mojolicious::Plugin::OpenAPI)
 
 
 
