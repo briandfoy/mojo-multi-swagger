@@ -15,7 +15,7 @@ Access it from a browser. The *mojo* cammand can do this, and *curl* is handy to
 
 The *v1* version of the API requires a form parameter:
 
-	mojo get -H http://localhost:3000/v2/hello?Hello_there
+	mojo get http://localhost:3000/v2/hello?Hello_there
 
     curl http://localhost:3000/v1/hello?message=hello+there
 
