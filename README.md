@@ -2,9 +2,25 @@
 
 I didn't know if I'd be able to load more than one Swagger file with [Mojolicious::Plugin::OpenAPI](https://metacpan.org/pod/Mojolicious::Plugin::OpenAPI), so I tried it—no problems.
 
+Call `plugin` as often as you like and it all works out.
+
+  foreach my $swagger_file ( glob( 'swagger/*.yml' ) ) {
+    $self->plugin(
+      'OpenAPI' => {
+        spec                 => $swagger_file,
+        render_specification => 1,
+        schema               => 'v3',
+      }
+    );
+	}
+
+## Installation
+
 To play with this, install the dependencies:
 
 	cpan -T .
+
+## Run it
 
 Run the server with *morbo*, which automatically picks up changes in
 the modules. You need to restart morbo if you change the Swagger files (under *swagger/*):
