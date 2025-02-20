@@ -4,15 +4,15 @@ I didn't know if I'd be able to load more than one Swagger file with [Mojoliciou
 
 Call `plugin` as often as you like and it all works out.
 
-  foreach my $swagger_file ( glob( 'swagger/*.yml' ) ) {
-    $self->plugin(
-      'OpenAPI' => {
-        spec                 => $swagger_file,
-        render_specification => 1,
-        schema               => 'v3',
-      }
-    );
-	}
+	foreach my $swagger_file ( glob( 'swagger/*.yml' ) ) {
+		$self->plugin(
+			'OpenAPI' => {
+				spec                 => $swagger_file,
+				render_specification => 1,
+				schema               => 'v3',
+				}
+			);
+		}
 
 ## Installation
 
