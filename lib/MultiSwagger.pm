@@ -1,6 +1,14 @@
 package MultiSwagger;
 use Mojo::Base 'Mojolicious', -signatures;
 
+=head1 NAME
+
+MultiSwagger - demonstration of Mojolicious with multiple Swagger files
+
+=cut
+
+our $VERSION = '1.001';
+
 sub startup ($self) {
   my $config = $self->plugin('NotYAMLConfig');
 
