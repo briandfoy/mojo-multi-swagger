@@ -41,7 +41,7 @@ my $module    = __PACKAGE__;
 ( my $dist = $module ) =~ s/::/-/g;
 
 my $github    = 'https://github.com/briandfoy/mojo-multi-swagger';
-my $main_file = 'lib/Multiswagger.pm';
+my $main_file = 'lib/MultiSwagger.pm';
 
 my %WriteMakefile = (
 	'MIN_PERL_VERSION' => '5.016',
